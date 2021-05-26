@@ -1,11 +1,6 @@
 
 name: Build & deploy
 
-on:
-  push:
-    branches:
-      - master
-
 env:
   PUBLIC_URL: /react-demo
 

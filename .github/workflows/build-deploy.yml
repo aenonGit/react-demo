@@ -1,6 +1,11 @@
 
 name: Build & deploy
 
+on:
+  push:
+    branches:
+      - master
+
 env:
   PUBLIC_URL: /react-demo
 
@@ -37,7 +42,6 @@ jobs:
     name: Deploy
     needs: build
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/master'
     
     steps:
     - name: Download artifact
